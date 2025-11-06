@@ -5,7 +5,7 @@ import { AuthModule } from './auth/auth.module';
 import { ChatModule } from './chat/chat.module';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
-import { DatabaseModule } from './utils/database.module';
+import { DatabaseModule } from './utils/database-connection.factory.ts';
 import { AllExceptionsFilter } from './utils/exceptions';
 import { APP_FILTER, APP_PIPE } from '@nestjs/core';
 import configuration from './config/configuration';
