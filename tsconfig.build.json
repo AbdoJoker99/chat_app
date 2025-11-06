@@ -1,0 +1,29 @@
+{
+  // 1. Extend the base configuration
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // 2. Set the output directory specifically for the build
+    "outDir": "./dist",
+    // 3. Enable source maps (optional, but highly recommended for debugging)
+    "sourceMap": true,
+    // 4. Critical for isolated builds: include only declaration files
+    "declaration": true,
+    "declarationMap": true,
+    // 5. Ensure TS doesn't output JS files when declarations are enabled
+    "noEmit": false,
+    "emitDeclarationOnly": false,
+    // 6. Tell TypeScript to only produce the output files, no type checking necessary here
+    "noEmitOnError": true, // Stops build if there are errors
+
+    /* Standard Monorepo/Build Settings */
+    // Ensure all references are correctly found
+    "composite": true,
+    // Do not include types from 'node_modules' in the compiled output
+    "skipLibCheck": true,
+    "rootDir": "./src"
+  },
+  // 7. Limit the files to compile to only what's necessary (e.g., only the source code)
+  "include": ["src/**/*"],
+  // 8. Exclude tests and other non-essential files from the compilation step
+  "exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts"]
+}
