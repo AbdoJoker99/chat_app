@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2020",
+    "rootDir": "./src",                  /* تحديد المجلد الذي يحتوي على ملفات TypeScript المصدر */
+    "outDir": "./dist",                  /* تحديد المجلد الذي سيحتوي على ملفات JavaScript الناتجة */
+    "esModuleInterop": true,
+    "strict": true,                      /* تفعيل جميع قواعد التحقق الصارمة (موصى بها) */
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    
+    // إعدادات خاصة بـ NestJS
+    "emitDecoratorMetadata": true,       /* ضروري لعمل الـ Decorators (مثل @Injectable) */
+    "experimentalDecorators": true,      /* ضروري لعمل الـ Decorators */
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "allowJs": true
+  },
+  "exclude": ["node_modules", "dist"]    /* استثناء المجلدات التي لا يجب أن يتم عمل Compile لها */
+}
